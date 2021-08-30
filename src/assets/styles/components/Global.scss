@@ -1,0 +1,57 @@
+html{
+  scroll-behavior: smooth;
+}
+.principal{
+  height: 100%;
+}
+.opacity{
+  opacity: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: white ;
+    color: black ;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+  }
+  .light{
+    background: #ccc ;
+    color:  white;
+    .main{
+      color: white;
+    }
+    .list{
+      a{
+        border-bottom: 2px solid white;
+      }
+      
+    }
+    .sobre__mi, .proyectos{
+      h2{
+        border-bottom: 2px solid #eeffef;
+      }
+    }
+    .proyecto_item-titulo{
+      color: black;
+    }
+    .navbar__list{
+      a{
+        color: white;
+      }
+      a:hover{
+        border-bottom: 2px solid white;
+       }
+    }
+
+    .feedback_container{
+      h2{
+        border-bottom:2px solid #eeffef;
+      }
+    }
+    footer{
+      color: black;
+    }
+    
+  }
+  

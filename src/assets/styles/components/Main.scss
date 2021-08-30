@@ -1,0 +1,260 @@
+.main{
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    strong{
+        color: lighten($color: $color-light, $amount: 1);
+    }
+    .container_main-data{
+        margin: 0 0.5rem; 
+        animation: bounce; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+        .container__img {
+            height: 100%;
+            width: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 1; 
+    }
+
+    .blend{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 500;
+        background-color: rgba(80,80,80,0.5);
+        background-blend-mode: soft-light;
+    }
+    
+    .main__icon{
+        z-index: 1000;
+        opacity: 0;
+        position: relative;
+        text-align: center;
+        animation-name: imgMainOpacity;
+        opacity: 0;
+        animation-duration: 2s;
+        box-sizing: content-box;
+        animation-delay: 0.3s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        .main__icon-code{
+            position: absolute;
+            width: 5%;
+            top: 30%;
+            left: 46%;
+            animation-name: imgMainOpacity;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            animation-delay: 1.6s;
+            animation-fill-mode: forwards;
+        }
+    }
+    .main__content{
+        text-align: center;
+        position: relative;
+        z-index: 1000;
+        color: white;
+        font-weight: 800;
+        margin-top: 10px;
+      .saludo{
+        position: relative;
+        right: -150%;
+        animation-name: saludoMainTranslate;
+        animation-duration: 0.7s;
+        animation-delay: 1.1s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        font-size: 40px;
+      }
+
+      .title{
+        position: relative;
+        bottom: -400px;
+        animation-name: titleMainTranslate;
+        animation-duration: 0.7s;
+        animation-delay: 1.3s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+      }
+      .list{
+          display: flex;
+          padding: 20px;
+          font-weight: 100;
+          justify-content: center;
+      }
+      li{
+          list-style: none;
+          padding: 10px;
+          position: relative;
+          left: -100%;
+          animation-name: listMainTranslate;
+          animation-duration: 0.7s;
+          animation-timing-function: ease-out;
+          animation-delay: 1.4s;
+          animation-fill-mode: forwards;
+        }
+        li:nth-child(1){
+            animation-delay: 1.8s;
+        }
+        li:nth-child(2){
+            animation-delay: 1.6s;
+        }
+    
+      a{
+          text-decoration: none;
+          color: white;
+          transition: all 0.2s ease;
+        }
+        a:hover{
+          border-bottom: 3px solid white;
+          color: white;
+          font-size: 18px;
+      }
+    }   
+  }
+  .main_icon-row{
+      position: absolute;
+      z-index: 1000;
+      bottom: 10%;
+      opacity: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: $color-light;
+      border-radius: 50%;
+      animation-name: saltorow;
+      animation-duration: 3s;
+      animation-delay: 1.8s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+  }
+}
+@keyframes saltorow {
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+
+    }
+    50%{
+        transform: translateY(-20px);
+        opacity: 1;
+
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+
+    }
+}
+
+@media  (min-width: 768px) and (max-width:991px){
+    .main{
+
+        .container_main-data{
+            margin-top: 50px;
+            .main__icon{
+
+                .main__icon-code{
+                    left: 48%;
+                }
+            }
+
+            .container__img{
+                margin-top: 10%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 992px){
+   
+    .main{
+        background-size: 100%;
+        .container_main-data{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .blend{
+                width: 100%;
+            }
+
+            .main__icon{
+                animation-delay: 2.5s;
+
+                .main__icon-code{
+                    left: 38%;
+                }
+            }
+
+            .main__content{
+                font-size: 20px;
+                width: 50%;
+                overflow: hidden;
+                .list{
+                    a{
+                      color:  white;
+                    }
+                    a:hover{
+                        font-size: 22px;
+                    }
+                }
+            }
+            .container__img{
+                position: absolute;
+                width: 100%;
+                
+            }
+            
+        }
+    }
+    
+
+}
+
+
+@keyframes saludoMainTranslate {
+    to{
+        right: 0%;
+    }
+    from{
+        right: -150%;
+    }
+}
+
+@keyframes titleMainTranslate {
+    to{
+        bottom: 0px;
+    }
+    from{
+        bottom: -400px;        
+    }
+}
+@keyframes listMainTranslate {
+    to{
+        left: 0px;
+    }
+    from{
+        left: -100%;        
+    }
+}
+
+@keyframes imgMainOpacity {
+    0%{
+        opacity: 0; 
+    }
+    
+    100%{
+        opacity: 1;
+    }
+}

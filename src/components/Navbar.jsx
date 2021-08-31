@@ -41,7 +41,7 @@ export const Navbar = () => {
         <div className={ scroll > 1 ? 'container__navbar fix' : 'container__navbar' }>
           <h2 className='container__icon'><a href='/'><span>Jimmy</span><strong>Alexander</strong></a></h2>
           
-            <Icon color='white' onClick={handleClicked} className='sun icons' icon={cambio === false ? `${mdiMoonWaxingCrescent}` : `${mdiWhiteBalanceSunny}`} />
+            <Icon color='white' title={cambio?'sun':'moon'} onClick={handleClicked} className='sun icons' icon={cambio === false ? `${mdiMoonWaxingCrescent}` : `${mdiWhiteBalanceSunny}`} />
           
           
             <Icon  onClick={handleClick} className={`burguer`} color='white'  icon={active === false ? `${mdiFormatLineWeight}` : `${mdiWindowClose}`}  />

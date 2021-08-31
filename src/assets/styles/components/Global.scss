@@ -16,42 +16,90 @@ body {
     
   }
   .light{
-    background: #ccc ;
-    color:  white;
+    background-color: $background-dark;
+    .container__navbar{
+      background: $background-dark;
+      box-shadow:  2px 5px 7px  #9999ff ;
+
+    }
+
     .main{
-      color: white;
-    }
-    .list{
-      a{
-        border-bottom: 2px solid white;
+      .container_main-data{
+
+        .main__content{
+          color: $background-dark;
+          text-shadow: 1px 1px 1px $background-light;
+
+          .list{
+            a{
+              color: $background-dark;
+              text-shadow: none;
+
+            }
+          }
+        }
       }
-      
-    }
-    .sobre__mi, .proyectos{
-      h2{
-        border-bottom: 2px solid #eeffef;
+      .main_icon-row{
+        background-color: $background-dark;
       }
     }
-    .proyecto_item-titulo{
-      color: black;
-    }
-    .navbar__list{
-      a{
-        color: white;
+
+    #sobre-mi{
+      .sobre__mi{
+        background-color: $background-dark;
+        h3{
+          color: $background-light;
+        }
       }
-      a:hover{
-        border-bottom: 2px solid white;
-       }
+    }
+
+    .proyectos{
+      .proyectos_container{
+        background-color: $background-dark;
+        .proyectos_item{
+          box-shadow: 1px 2px  5px #9999ff ;
+          
+          h3{
+            color: $color-light;
+          }
+          img{
+            box-shadow: 6px 6px 14px #899592,
+               -6px -6px 14px #f9ffff;
+  
+          }
+          background-color: $background-dark_light;
+          .proyectos_item-info{
+            .proyecto_enlaces{
+              a{
+                box-shadow: 2px 4px 4px  #999;
+              }
+            } 
+          }
+        }
+      }
+    }
+
+    .skills{
+      background-color: $background-dark_light;
     }
 
     .feedback_container{
-      h2{
-        border-bottom:2px solid #eeffef;
+      .feedback{
+        color: $background-light;
+        background-color: $background-dark_light;
       }
     }
-    footer{
-      color: black;
-    }
     
+    footer{
+      color: $background-light;
+      background-color: $background-dark_light;
+      .iconfooter{
+        color: $background-dark;
+      }
+      .main_icon-row-home{
+        background-color: $background-dark;
+      }
+    }
+
   }
   

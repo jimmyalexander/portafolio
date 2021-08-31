@@ -33,7 +33,7 @@ export const Proyectos = () => {
                 </p>
                 <div className='proyecto_enlaces'>
                   <a target='blank' href='https://jimmyalexander.github.io/tienda/' >VER PROYECTO</a>
-                  <a target='blank' href='https://jimmyalexander.github.io/tienda/' >VER CODIGO</a>
+                  <a target='blank' href='https://github.com/jimmyalexander/tienda' >VER CODIGO</a>
                 </div>
               </div>
             </div>

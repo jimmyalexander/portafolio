@@ -22,8 +22,8 @@ export const Main = () => {
             <div className='blend'></div>
 
             <div className='main__icon'>
-              <Icon icon={  mdiMonitor }  size='150' color='white'  />
-              <Icon className='main__icon-code' icon={  mdiCodeJson } color='#ea4c89' size='40'   />
+              <Icon icon={  mdiMonitor }  size='150' color='white' title='pc' />
+              <Icon className='main__icon-code' icon={  mdiCodeJson } color='#ea4c89' size='40' title='pc'   />
             </div>
 
             <div className='main__content '>
@@ -34,19 +34,19 @@ export const Main = () => {
 
               <ul className='list'>
                 <li className='list__item'>
-                  <Icon icon={mdiTwitter} color='white'  />
+                  <Icon icon={mdiTwitter} color='white' title='twitter' />
                   <a target='blank'  href='https://twitter.com/jkastiblanco'>
                     Twitter
                   </a>
                 </li>
 
                 <li>
-                  <Icon  icon={mdiGithub} color='white'/>
+                  <Icon  icon={mdiGithub} color='white' title='git hub'/>
                   <a target='blank' href='https://github.com/jimmyalexander'>Github</a>
                 </li>
 
                 <li>
-                  <Icon icon={mdiLinkedin} color='white'  />
+                  <Icon icon={mdiLinkedin} color='white' title='linkedin'  />
                   <a target='blank' href='https://www.linkedin.com/in/jimmy-alexander-castiblanco-bustos-6a32191aa/'>Linkedin</a>
                 </li>
 
